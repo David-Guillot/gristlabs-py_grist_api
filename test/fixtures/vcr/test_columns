@@ -13,7 +13,7 @@ interactions:
       User-Agent:
       - python-requests/2.31.0
     method: GET
-    uri: http://localhost:8080/api/docs/mqpaKNo1B3Ag/tables/Table1/columns
+    uri: http://localhost:8080/o/docs-8/api/docs/28a446f2-903e-4bd4-8001-1dbd3a68e5a5/tables/Table1/columns
   response:
     body:
       string: '{"columns":[{"id":"col1","fields":{"colRef":2,"parentId":1,"parentPos":2,"type":"Text","widgetOptions":"","isFormula":false,"formula":"","label":"col1","description":"","untieColIdFromLabel":false,"summarySourceCol":0,"displayCol":0,"visibleCol":0,"rules":null,"recalcWhen":1,"recalcDeps":null}},{"id":"col2","fields":{"colRef":3,"parentId":1,"parentPos":3,"type":"Numeric","widgetOptions":"","isFormula":false,"formula":"","label":"col2","description":"","untieColIdFromLabel":false,"summarySourceCol":0,"displayCol":0,"visibleCol":0,"rules":null,"recalcWhen":0,"recalcDeps":null}},{"id":"col3","fields":{"colRef":4,"parentId":1,"parentPos":4,"type":"Int","widgetOptions":"","isFormula":false,"formula":"","label":"col3","description":"","untieColIdFromLabel":false,"summarySourceCol":0,"displayCol":0,"visibleCol":0,"rules":null,"recalcWhen":0,"recalcDeps":null}},{"id":"col4","fields":{"colRef":5,"parentId":1,"parentPos":5,"type":"Bool","widgetOptions":"","isFormula":false,"formula":"","label":"col4","description":"","untieColIdFromLabel":false,"summarySourceCol":0,"displayCol":0,"visibleCol":0,"rules":null,"recalcWhen":0,"recalcDeps":null}}]}'

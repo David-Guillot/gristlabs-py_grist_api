@@ -13,7 +13,7 @@ interactions:
       User-Agent:
       - python-requests/2.31.0
     method: GET
-    uri: http://localhost:8080/api/docs/mqpaKNo1B3Ag/tables
+    uri: http://localhost:8080/o/docs-8/api/docs/28a446f2-903e-4bd4-8001-1dbd3a68e5a5/tables
   response:
     body:
       string: '{"tables":[{"id":"Table1","fields":{"primaryViewId":1,"summarySourceTable":0,"onDemand":false,"rawViewSectionRef":2,"tableRef":1}}]}'
