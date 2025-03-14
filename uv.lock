@@ -180,7 +180,7 @@ dependencies = [
 ]
 
 [package.dev-dependencies]
-dev = [
+test = [
     { name = "coverage" },
     { name = "vcrpy" },
 ]
@@ -192,7 +192,7 @@ requires-dist = [
 ]
 
 [package.metadata.requires-dev]
-dev = [
+test = [
     { name = "coverage" },
     { name = "vcrpy" },
 ]
