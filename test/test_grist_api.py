@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 # pylint: disable=no-self-use,missing-docstring,bad-whitespace
 
 # The test is intended to test the behavior of the library, i.e. translating python calls to HTTP
@@ -18,7 +17,6 @@
 
 # Run nosetests with --nologcapture to see logging, and with -s to see print output.
 
-from __future__ import unicode_literals, print_function
 from collections import namedtuple
 from datetime import date
 import logging
@@ -145,7 +143,7 @@ class TestGristDocAPI(unittest.TestCase):
   @vcr.use_cassette()
   def test_update_records_varied(self):
     # Mismatched column sets cause an error.
-    with self.assertRaisesRegexp(ValueError, "needs group_if_needed"):
+    with self.assertRaisesRegex(ValueError, "needs group_if_needed"):
       self._grist_api.update_records('Table1', [
         {"id": 1, "Num": -5, "Text_Field": "snapple"},
         {"id": 4, "Num": -1.5, "ColorRef": 2},
@@ -344,9 +342,9 @@ class TestGristDocAPI(unittest.TestCase):
 
   @vcr.use_cassette()
   def test_errors(self):
-    with self.assertRaisesRegexp(requests.HTTPError, "Table not found.*Unicorn"):
+    with self.assertRaisesRegex(requests.HTTPError, "Table not found.*Unicorn"):
       self._grist_api.fetch_table('Unicorn')
-    with self.assertRaisesRegexp(requests.HTTPError, "ColorBoom"):
+    with self.assertRaisesRegex(requests.HTTPError, "ColorBoom"):
       self._grist_api.fetch_table('Table1', {"ColorRef": 1, "ColorBoom": 2})
-    with self.assertRaisesRegexp(requests.HTTPError, "Invalid column.*NumX"):
+    with self.assertRaisesRegex(requests.HTTPError, "Invalid column.*NumX"):
       self._grist_api.add_records('Table1', [{"Text_Field": "Beets", "NumX": 2}])

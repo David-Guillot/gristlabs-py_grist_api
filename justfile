@@ -1,5 +1,10 @@
+set dotenv-load
+
 default:
     just --list
+
+test:
+  uv run --no-sync python -m unittest test/test_grist_api.py
 
 @dist:
 	echo "Build python distribution"
