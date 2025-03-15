@@ -8,12 +8,6 @@ Dates received from Grist remain as numerical timestamps, and may be converted u
 function exported by this module.
 """
 
-# pylint: disable=wrong-import-position,wrong-import-order,import-error
-from future import standard_library
-from future.builtins import range, str
-from future.utils import viewitems
-standard_library.install_aliases()
-
 import datetime
 import decimal
 import itertools
@@ -164,7 +158,7 @@ class GristDocAPI(object):
     query = ''
     if filters:
       query = '?filter=' + quote_plus(json.dumps(
-        {k: [to_grist(v)] for k, v in viewitems(filters)}, sort_keys=True))
+        {k: [to_grist(v)] for k, v in filters.items()}, sort_keys=True))
 
     columns = self.call('tables/%s/data%s' % (table_name, query))
     # convert columns to rows
@@ -392,7 +386,7 @@ def desc_col_values(data):
   of values).
   """
   rows = 0
-  for _, values in viewitems(data):
+  for _, values in data.items():
     rows = len(values)
     break
   return "%s rows, cols (%s)" % (rows, ', '.join(sorted(data.keys())))
